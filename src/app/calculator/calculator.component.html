@@ -1,0 +1,12 @@
+<input type="number" [(ngModel)]="firtNumber">
+<select [(ngModel)]="calculartor">
+  <option value="+">+</option>
+  <option value="-">-</option>
+  <option value="*">x</option>
+  <option value="/">/</option>
+</select>
+
+<input type="number" [(ngModel)]="secondNumber">
+<button (click)="calculartorNumber()">Calculator</button>
+<p>Result: {{result}}</p>
+
