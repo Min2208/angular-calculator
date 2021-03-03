@@ -1,0 +1,23 @@
+<h2>Color Picker</h2>
+<div>
+  <label>Chọn màu:</label>
+  <input type="color" [(ngModel)]="light"> <button (click)="onChange()">Add line</button>
+</div>
+<p>Color choose: </p>
+<div *ngFor="let light of lstLight" style="width:100px;height:100px;border-radius:50%; margin: 10px" [style]="{'background':light}"></div>
+<p>Output:</p>
+<br>
+<div *ngIf="lstLight.length > 0">
+
+  <div style="width:100px;height:100px;border-radius:50%" [style]="{'background':backgroundShow}"></div>
+  <h2>Countdown Timer</h2>
+
+  <div class="group-actions">
+    <button (click)="start()" [disabled]="disableButton === 2">Start</button>
+    <button (click)="reset()" [disabled]="disableButton === 1">Reset</button>
+  </div>
+  <div class="timer">
+    <span class="timer-text">{{remainingTime}}</span>
+  </div>
+</div>
+
